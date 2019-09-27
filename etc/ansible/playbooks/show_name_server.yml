@@ -1,10 +1,10 @@
 ####################################
-## Author: 	Hung Tran	  ##
-## Python: 	Python 3.6.8	  ##
-## Ansible:	ansible 2.8.5	  ##
-## Cisco IOS:	Version 15.5(2)T  ##
-## Built date:	27.09.2019     ##
-## Tested date:27.09.2019	  ##
+## Author: 	Hung Tran  
+## Python: 	Python 3.6.8  
+## Ansible:	ansible 2.8.5  
+## Cisco IOS:	Version 15.5(2)T  
+## Built date:	27.09.2019  
+## Tested date:27.09.2019  
 ####################################
 
 ---

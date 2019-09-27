@@ -1,0 +1,15 @@
+---
+- name: configure cisco routers
+  hosts: automation
+  connection: network_cli
+  gather_facts: no
+  vars:
+    dns: "8.8.8.8 8.8.4.4"
+
+# We make changes with the following task without saving the configuration
+# Ansible returns with "changed" results
+
+  tasks:
+   - name: configure DNS
+     ios_config:
+       lines: ip name-server {{dns}}

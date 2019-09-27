@@ -21,18 +21,18 @@
        commands: show run | i name-server
      register: name_server_output
 
-**"msg='{{name_server_output.stdout_lines}}'"**
+#################################### "msg='{{name_server_output.stdout_lines}}'"
 #
   - debug: 
      "msg='{{name_server_output.stdout_lines}}'"
 #
 
-**"msg='{{name_server_output.stdout_lines}}'"**
+#################################### "msg='{{name_server_output.stdout_lines}}'"
 #
   - debug: "msg='{{name_server_output.stdout_lines}}'"
 #
 #####
-**msg: "{{name_server_output.stdout_lines}}"**
+#################################### msg: "{{name_server_output.stdout_lines}}"
 #
   - debug:
       msg: "{{name_server_output.stdout_lines}}"
@@ -43,7 +43,7 @@
   - debug:
       msg: "{{name_server_output.stdout}}"
 
-**var: name_server_output.stdout**
+#################################### var: name_server_output.stdout
 #
   - debug:
       var: name_server_output.stdout
@@ -74,7 +74,7 @@ automation_01              : ok=2    changed=0    unreachable=0    failed=0    s
 automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
 
-##### **var: name_server_output.stdout_lines**
+#################################### var: name_server_output.stdout_lines
 #
   - debug:
       var: name_server_output.stdout_lines

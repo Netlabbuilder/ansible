@@ -2,10 +2,10 @@ The following steps are to install the latest version of Ansible (ansible 2.8.5,
 
 1. Check CentOS 7 version:
 
-[root@netlabbuilder ~]# **cat /etc/centos-release**
+[root@netlabbuilder ~]# cat /etc/centos-release
 CentOS Linux release 7.6.1810 (Core)
 
-[root@netlabbuilder ~]# **hostnamectl**
+[root@netlabbuilder ~]# hostnamectl
    Static hostname: netlabbuilder
          Icon name: computer-vm
            Chassis: vm

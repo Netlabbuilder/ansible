@@ -21,6 +21,9 @@
        commands: show run | i name-server
      register: name_server_output
 
+# We registered an variable 'name_server_output' containing the output of 'show run | i name-server' command
+# To display the output, we can use either 'msg' or 'var' option under DEBUG module
+
 #################################### "msg='{{name_server_output.stdout_lines}}'"
 #
   - debug: 

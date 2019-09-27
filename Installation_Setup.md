@@ -1,11 +1,11 @@
 The following steps are to install the latest version of Ansible (ansible 2.8.5, as of 26.09.2019), and get it up and running on CentOS 7 (CentOS Linux release 7.6.1810) with Python3 (Python 3.6.8)
 
-** 1. Check CentOS 7 version: **
+1. Check CentOS 7 version:
 
-[root@netlabbuilder ~]# ** cat /etc/centos-release **
+[root@netlabbuilder ~]# **cat /etc/centos-release**
 CentOS Linux release 7.6.1810 (Core)
 
-[root@netlabbuilder ~]# hostnamectl
+[root@netlabbuilder ~]# **hostnamectl**
    Static hostname: netlabbuilder
          Icon name: computer-vm
            Chassis: vm
@@ -19,20 +19,20 @@ CentOS Linux release 7.6.1810 (Core)
       
 2. Check Python (Python 2 and Python 3) version:
 
-[root@netlabbuilder ~]# python --version
+[root@netlabbuilder ~]# **python --version**
 Python 2.7.5
 
-[root@netlabbuilder ~]# python3.6 --version
+[root@netlabbuilder ~]# **python3.6 --version**
 Python 3.6.8
 
 3. Install the latest version of Ansible and get it running with Python3
 
-[root@netlabbuilder ~]# pip3 install ansible
+[root@netlabbuilder ~]# **pip3 install ansible**
 ...
 
 4. Verify the ansible and its Python3 interpreter
 
-[root@netlabbuilder ~]# ansible --version
+[root@netlabbuilder ~]# **ansible --version**
 ansible 2.8.5
   config file = /etc/ansible/ansible.cfg
   configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']

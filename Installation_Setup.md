@@ -43,10 +43,12 @@ The following steps are to install the latest version of Ansible (ansible 2.8.5,
 
    * [root@netlabbuilder ~]# cd /etc/ansible/  
    * [root@netlabbuilder ansible]# tree  
-   * .
    * ├── ansible.cfg
    * ├── hosts
+   * ├── playbooks
+   * │   ├── config_name_server.yml
+   * │   └── show_name_server.yml
    * └── roles
 
-   * 1 directory, 2 files
+   * 2 directories, 4 files
    * [root@netlabbuilder ansible]#

@@ -40,3 +40,14 @@ ansible 2.8.5
   executable location = /usr/bin/ansible
   python version = 3.6.8 (default, May  2 2019, 20:40:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
   
+5. Ansible working directory (folder) is found under /etc/ansible
+
+[root@netlabbuilder ~]# cd /etc/ansible/
+[root@netlabbuilder ansible]# tree
+.
+├── ansible.cfg
+├── hosts
+└── roles
+
+1 directory, 2 files
+[root@netlabbuilder ansible]#

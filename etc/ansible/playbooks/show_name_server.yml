@@ -15,9 +15,6 @@
   vars:
     dns: "8.8.8.8 8.8.4.4"
 
-# We make changes with the following task without saving the configuration
-# Ansible returns with "changed" results
-
   tasks:
    - name: Display name-server configuration
      ios_command:
@@ -35,8 +32,71 @@
 #  - debug:
 #      msg: "{{name_server_output.stdout}}"
 
-#  - debug:
-#      var: name_server_output.stdout
+##### ** var: name_server_output.stdout **
+#
+  - debug:
+      var: name_server_output.stdout
+#
+[root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
 
-#  - debug:
-#      var: name_server_output.stdout_lines
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_01]
+ok: [automation_02]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_02] => {
+    "name_server_output.stdout": [
+        "ip name-server 8.8.8.8\nip name-server 8.8.4.4"
+    ]
+}
+ok: [automation_01] => {
+    "name_server_output.stdout": [
+        "ip name-server 8.8.8.8\nip name-server 8.8.4.4"
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+##### ** var: name_server_output.stdout_lines **
+#
+  - debug:
+      var: name_server_output.stdout_lines
+#
+[root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
+
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_01]
+ok: [automation_02]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_01] => {
+    "name_server_output.stdout_lines": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+ok: [automation_02] => {
+    "name_server_output.stdout_lines": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+#####

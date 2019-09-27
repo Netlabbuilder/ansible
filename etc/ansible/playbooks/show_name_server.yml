@@ -26,22 +26,141 @@
   - debug: 
      "msg='{{name_server_output.stdout_lines}}'"
 #
+[root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
+
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_02]
+ok: [automation_01]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_01] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+ok: [automation_02] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
 
 #################################### "msg='{{name_server_output.stdout_lines}}'"
 #
   - debug: "msg='{{name_server_output.stdout_lines}}'"
 #
-#####
+[root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
+
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_02]
+ok: [automation_01]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_01] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+ok: [automation_02] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
 #################################### msg: "{{name_server_output.stdout_lines}}"
 #
   - debug:
       msg: "{{name_server_output.stdout_lines}}"
- #
+#
+[root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
 
-**"{{name_server_output.stdout}}"t**
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_02]
+ok: [automation_01]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_01] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+ok: [automation_02] => {
+    "msg": [
+        [
+            "ip name-server 8.8.8.8",
+            "ip name-server 8.8.4.4"
+        ]
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+#################################### msg: "{{name_server_output.stdout}}"
 #
   - debug:
       msg: "{{name_server_output.stdout}}"
+#
+root@netlabbuilder ansible]# ansible-playbook -k playbooks/show_name_server.yml
+SSH password: 
+
+PLAY [show configuration on Cisco devices] **********************************************************************************************************
+
+TASK [Display name-server configuration] ************************************************************************************************************
+ok: [automation_02]
+ok: [automation_01]
+
+TASK [debug] ****************************************************************************************************************************************
+ok: [automation_01] => {
+    "msg": [
+        "ip name-server 8.8.8.8\nip name-server 8.8.4.4"
+    ]
+}
+ok: [automation_02] => {
+    "msg": [
+        "ip name-server 8.8.8.8\nip name-server 8.8.4.4"
+    ]
+}
+
+PLAY RECAP ******************************************************************************************************************************************
+automation_01              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+automation_02              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
 
 #################################### var: name_server_output.stdout
 #

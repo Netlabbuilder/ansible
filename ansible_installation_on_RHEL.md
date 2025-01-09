@@ -5,5 +5,5 @@
   * dnf install ansible-core
 
 **3. Verify ansible version after installation**
-  * dnf infor ansible-core
+  * dnf info ansible-core
   * ansible --version

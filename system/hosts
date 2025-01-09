@@ -1,0 +1,8 @@
+rockylinux941
+rockylinux942
+
+[rocky1]
+rockylinux941
+
+[rocky2]
+rockylinux942

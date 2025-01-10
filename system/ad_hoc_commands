@@ -1,11 +1,14 @@
 # Inventory file is a custom 'hosts' file, not the default ansible 'hosts' file 
-# List all managed nodes in inventory 'hosts' file
+# List all managed nodes in the inventory 'hosts' file
   ansible all -i inventory --list-hosts
+
+# List all ungrouped managed nodes in the inventory 'hosts' file
+  ansible ungrouped -i hosts -m setup
 
 # Check connections to all (submarine ping, not ICMP)
   ansible all -i hosts -m ping
 
-# Run a command (here is "uptime") on all the hosts in the 'rocky1' group
+# Run a command (here is "uptime") on all managed nodes in the 'rocky1' group
   ansible rocky1 -i hosts -m command -a "uptime"
 
 # Collect and display known facts for “rocky2” group

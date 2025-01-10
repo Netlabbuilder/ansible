@@ -1,4 +1,4 @@
-# Inventory file is a custom 'hosts' file, not the default ansible 'hosts' file 
+# Inventory file is a custom 'hosts' file, not the default '/etc/ansible/hosts' file 
 # List all managed nodes in the inventory 'hosts' file
   ansible all -i inventory --list-hosts
 

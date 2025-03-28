@@ -1,29 +1,29 @@
 The following steps are to install the latest version of Ansible (ansible 2.8.5, as of 26.09.2019), and get it up and running on CentOS 7 (CentOS Linux release 7.6.1810) with Python3 (Python 3.6.8):
 
 **1. Check CentOS 7 version:**
-   * [root@netlabbuilder ~]# **cat /etc/centos-release**  
-   * CentOS Linux release 7.6.1810 (Core)
+```
+[root@netlabbuilder ~]# **cat /etc/centos-release**  
+CentOS Linux release 7.6.1810 (Core)
 
-   * [root@netlabbuilder ~]# **hostnamectl**  
-   Static hostname: netlabbuilder  
-         Icon name: computer-vm  
-           Chassis: vm  
-        Machine ID: 0130132fcc9240d2b4c716df1dec6d7c  
-           Boot ID: 008c22643d7b4acb9535495785ed8efc  
-    Virtualization: vmware  
-  Operating System: CentOS Linux 7 (Core)  
-       CPE OS Name: cpe:/o:centos:centos:7  
-            Kernel: Linux 3.10.0-957.27.2.el7.x86_64  
-      Architecture: x86-64  
-      
+[root@netlabbuilder ~]# hostnamectl 
+Static hostname: netlabbuilder  
+Icon name: computer-vm  
+Chassis: vm  
+Machine ID: 0130132fcc9240d2b4c716df1dec6d7c  
+Boot ID: 008c22643d7b4acb9535495785ed8efc  
+Virtualization: vmware  
+Operating System: CentOS Linux 7 (Core)  
+CPE OS Name: cpe:/o:centos:centos:7  
+Kernel: Linux 3.10.0-957.27.2.el7.x86_64  
+Architecture: x86-64  
+``` 
 **2. Check Python (Python 2 and Python 3) version:**
-
-   * [root@netlabbuilder ~]# **python --version**  
-   * Python 2.7.5
-
-   * [root@netlabbuilder ~]# **python3.6 --version**  
-   * Python 3.6.8
-
+```
+[root@netlabbuilder ~]#
+Python 2.7.5
+[root@netlabbuilder ~]# 
+Python 3.6.8
+```
 **3. Install the latest version of Ansible and get it running with Python3**
 
    * [root@netlabbuilder ~]# **pip3 install ansible**  

@@ -1,3 +1,5 @@
+The following steps are to install the latest version of Ansible on RHEL:
+
 **1. Install EPEL repo**
   * dnf install epel-release
 
